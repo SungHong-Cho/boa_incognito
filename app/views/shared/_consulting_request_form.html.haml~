@@ -1,0 +1,77 @@
+  = form_for @consulting, :url => { :controller => "consultings", :action => "create" }, :html => {:class => "nifty_form", multipart: true, data: {ajax: false}} do |f|
+    %div{data: {role: "fieldcontain"}}
+      = f.label :name, "이름"
+      = f.text_field :name
+      
+    %div{data: {role: "fieldcontain"}}
+      = f.label :number, "연락처"
+      = f.text_field :number
+      
+    %div{data: {role: "fieldcontain"}}
+      = f.label :email, "이메일"
+      = f.text_field :email
+    %div{data: {role: "fieldcontain"}}
+      = f.label :date, "상담 희망일자"
+      %input{type: "date", name: "consulting[date]", id: "consulting_date", placeholder: "좌측의 캘린더를 터치해주세요.", data: { role: "datebox", options: '{"mode": "calbox"}' }}
+    %div{data: {role: "fieldcontain"}}
+      = f.label :image, "내 치아사진 올리기"
+      = f.file_field :image
+
+    %div{data: {role: "fieldcontain"}}
+      = f.label :comment, "문의사항"
+      = f.text_area :comment
+
+    %div{data: {role: "fieldcontain"}}
+      %fieldset#med_type{data: {role: "controlgroup"}, name: "med_type"}
+        %legend{for: "med_type", style: "vertical-align: middle;"} 희망 진료 선택
+        = f.label :med_ccl, "CCL 잇몸성형"
+        = f.check_box :med_ccl, {}, true, false
+        = f.label :med_lp, "LP 잇몸성형"
+        = f.check_box :med_lp, {}, true, false
+
+    .bot
+      = f.button "등록", type: "button", onclick: "submitForm();"
+      = f.button "다시 쓰기", type: "button", onclick: "clearForm();"
+
+:javascript
+  function submitForm() { 
+  var formEl = document.getElementById('new_consulting');
+  var errorMessage = null;  
+  var objFocus = null;  
+  if (formEl.consulting_name.value.length == 0) {  
+  errorMessage = "이름을 입력하여 주십시오.";  
+  objFocus = formEl.consulting_name;  
+  }
+  else if (formEl.consulting_number.value.length == 0) {  
+  errorMessage = "전화번호를 입력하여 주십시오";  
+  objFocus = formEl.consulting_number;  
+  }  
+  else if (formEl.consulting_email.value.length == 0) {  
+  errorMessage = "이메일 주소를 입력하여 주십시오";  
+  objFocus = formEl.consulting_email;  
+  }  
+  else if (formEl.consulting_date.value.length == 0) {  
+  errorMessage = "희망 날짜를 입력하여 주십시오";  
+  objFocus = formEl.consulting_date;  
+  }  
+  
+  if (errorMessage != null) {  
+  alert(errorMessage);  
+  objFocus.focus();  
+  return false;  
+  }
+  else{
+  alert("상담신청이 접수되었습니다.");
+  formEl.submit();
+  return true;
+  }
+  } 
+
+  function clearForm() {
+  var formEl = document.getElementById('new_consulting');
+  formEl.consulting_name.value = "";
+  formEl.consulting_number.value = "";
+  formEl.consulting_email.value = "";
+  formEl.consulting_date.value = "";
+  formEl.consulting_comment.value="";
+  }

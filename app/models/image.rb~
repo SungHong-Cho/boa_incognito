@@ -1,0 +1,7 @@
+class Image
+  include Mongoid::Document
+  include Mongoid::Timestamps
+  include Mongoid::Paranoia
+
+  embedded_in :article, polymorphic: true, cascade_callbacks: true
+end

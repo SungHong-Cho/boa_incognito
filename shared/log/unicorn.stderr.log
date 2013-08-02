@@ -1,0 +1,8 @@
+I, [2013-05-16T13:05:59.211083 #2275]  INFO -- : Refreshing Gem list
+I, [2013-05-16T13:06:04.632310 #2275]  INFO -- : listening on addr=/home/ubuntu/Projects/ccl_muse/tmp/sockets/.unicorn.sock fd=9
+I, [2013-05-16T13:06:04.632683 #2275]  INFO -- : listening on addr=0.0.0.0:8080 fd=10
+I, [2013-05-16T13:06:04.674878 #2281]  INFO -- : worker=0 ready
+I, [2013-05-16T13:06:04.703314 #2284]  INFO -- : worker=1 ready
+I, [2013-05-16T13:06:04.729846 #2287]  INFO -- : worker=2 ready
+I, [2013-05-16T13:06:04.739130 #2275]  INFO -- : master process ready
+I, [2013-05-16T13:06:04.762694 #2290]  INFO -- : worker=3 ready

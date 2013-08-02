@@ -1,0 +1,68 @@
+<% content_for :js do %>
+    <script type="text/javascript" charset="utf-8">
+function getElementsByClassName(classname,tag) {
+        if(!tag) tag = "*";
+        var anchs =  document.getElementsByTagName(tag);
+        var total_anchs = anchs.length;
+        var regexp = new RegExp('\\b' + classname + '\\b');
+        var class_items = new Array()
+
+        for(var i=0;i<total_anchs;i++) {  
+                var this_item = anchs[i];
+                if(regexp.test(this_item.className)) class_items.push(this_item);
+        }
+        return class_items;
+}
+ 
+   $(window).load(function() {
+          var winw = $(window).width();
+          var dong = document.getElementsByTagName("iframe");
+          for(var i=0; i<dong.length;i++){
+             dong[i].width =  winw * 0.84;
+             dong[i].height = dong[i].width * 9 / 16;
+          }
+      });
+
+    function executeURLLink(clip_msg, clip_url){
+       kakao.link("talk").send({
+                msg : clip_msg,
+                url : clip_url,
+                appid : "m.cclmuse.com",
+                appver : "1.0",
+                appname : "CCL치과",
+                type : "link"
+        });
+    }
+ 
+    </script>
+<% end %>
+
+   <div class="content_text">
+	<div class="clip_element">
+          <h1> 잇몸성형 UCC </h1>
+	</div>
+
+	<div class="clip">
+
+	  <% @clips.each do |clip| %>
+
+	  <div class="clip_element">
+	    <div class="movie_area">
+
+              <iframe width="1024" height="315" src='<%= clip.youtube_url %>' frameborder="0" allowfullscreen></iframe>       
+
+	    </div>
+	    <div class="name_area">
+
+              <%= clip.title %>
+
+	    </div>
+            <div class="kakao_area" onclick="executeURLLink('<%=clip.title %>', '<%= clip.youtube_url%>');">
+              <img src="img/kakao.png">
+            </div>
+	  </div>
+<% end %>
+</div>
+   </div>
+
+

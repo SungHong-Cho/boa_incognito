@@ -1,0 +1,2 @@
+/* daum_editor custom configuration. */
+daumEditorConfig = { uploadImageAction: "<%= '/admin/' + 'abouts' + '/image_upload' %>" };

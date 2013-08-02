@@ -1,0 +1,36 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require bootstrap_and_overrides
+ *= require daum_editor
+ *= require_self
+ */
+.admin_header {
+    background: image-url("header_pattern.png") repeat-x center top;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.admin_footer {
+    background: image-url("footer_pattern.png") repeat-x center top;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.admin_body {
+    margin: 0 auto;
+    width: 980px;
+}
+
+.table thead th {
+    vertical-align: middle;
+}
+
+    

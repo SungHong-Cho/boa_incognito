@@ -1,0 +1,21 @@
+!!! 5
+%html
+  %head
+    %title CCL MUSE
+    = stylesheet_link_tag "admin"
+    = javascript_include_tag "admin_head_javascripts"
+
+  %body
+    .admin_header
+      = image_tag("header.png")
+
+    .admin_body
+      .container-fluid
+        .row-fluid
+          .span2
+            = render partial: 'shared/sidebar'
+          = yield
+        
+    .admin_footer
+      = image_tag("footer.png")
+    = yield :js

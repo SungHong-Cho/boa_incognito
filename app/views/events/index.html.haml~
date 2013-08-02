@@ -1,0 +1,21 @@
+.container
+  .row
+    .span9
+      %table.table
+        %thead
+          %tr
+            %th title
+            %th visible
+            %th created_at
+            %th priority
+            %tbody
+              - @events.each do |entry|
+                %tr
+                  %td= entry.title
+                  %td= entry.visible
+                  %td= entry.created_at
+                  %td= entry.priority
+    .span9
+      = link_to "New", new_about_path, class:"btn btn-primary"
+  .row
+    = render "shared/jqueryFileUpload_templete"

@@ -1,0 +1,31 @@
+%div{onload: initUploader();} Upload Complete.
+:javascript
+  function done() {
+		
+	}
+
+	function initUploader(){
+	    var _opener = PopupUtil.getOpener();
+	    if (!_opener) {
+	        alert('잘못된 경로로 접근하셨습니다.');
+	        return;
+	    }
+	    
+	    var _attacher = getAttacher('image', _opener);
+	    registerAction(_attacher);
+
+            if (typeof(execAttach) == 'undefined') { //Virtual Function
+	        return;
+	    }
+
+		var _mockdata = {
+			'imageurl': 'http://cfile284.uf.daum.net/image/116E89154AA4F4E2838948',
+			'filename': 'editor_bi.gif',
+			'filesize': 640,
+			'imagealign': 'C',
+			'originalurl': 'http://cfile284.uf.daum.net/original/116E89154AA4F4E2838948',
+			'thumburl': 'http://cfile284.uf.daum.net/P150x100/116E89154AA4F4E2838948'
+		};
+		execAttach(_mockdata);
+		closeWindow();
+	}

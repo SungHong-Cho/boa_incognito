@@ -1,0 +1,11 @@
+
+
+<div class="content_text" style="margin-top:50px; padding-top:0;">  <!-- aboutccl 본문 시작 -->
+
+     <% @abouts.each do |about| %>
+       <h1><%= about.title %></h1>
+       <%=raw about.content %> 
+     <% end %>
+</div>  <!-- aboutccl 본문 끝 -->
+
+

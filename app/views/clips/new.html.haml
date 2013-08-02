@@ -1,0 +1,27 @@
+.span10
+  = form_tag clips_path, method: "POST", class: "form-horizontal" do
+    .control-group
+      %label.control-label
+        우선순위
+      .controls
+        = text_field_tag 'clip[priority]', @clip.priority, class: "input-small", placeholder: "우선순위"
+    .control-group
+      %label.control-label
+        제목
+      .controls
+        = text_field_tag 'clip[title]', @clip.title, class: "input-xxlarge", placeholder: "제목을 입력하세요."
+    .control-group
+      %label.control-label
+        Youtube URL
+      .controls
+        = text_field_tag 'clip[youtube_url]', @clip.youtube_url, class: "input-xxlarge", placeholder: "유투브 주소를 입력하세요."
+    %hr
+      .control-group
+        %label.controls.checkbox
+          = check_box_tag "clip[visible]", "true"
+          이 항목을 활성화시킵니다.
+    %hr
+
+    %div{ style: "text-align: center; word-spacing: 20px;" }
+      = submit_tag "저장", class: "btn btn-large btn-primary"
+      = link_to "취소", clips_path, class: "btn btn-large btn-danger"

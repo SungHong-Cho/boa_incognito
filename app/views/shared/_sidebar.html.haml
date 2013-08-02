@@ -1,0 +1,13 @@
+%h4{style:"margin-bottom: 15px;"} 관리 메뉴
+%ul.nav.nav-tabs.nav-stacked
+  %li{class: ("active" if controller.controller_name == "abouts")}
+    = link_to "진료소개 관리", abouts_path
+  %li{class: ("active" if controller.controller_name == "clips")}
+    = link_to "홍보영상 관리", clips_path
+  %li{class: ("active" if controller.controller_name == "events")}
+    = link_to "이벤트 관리", events_path
+  %li{class: ("active" if controller.controller_name == "consultings")}
+    = link_to "상담신청 관리", consultings_path
+.btn-group.btn-group-vertical
+  = link_to "메인화면", index_main_path, class: "btn btn-info"
+  = link_to "로그아웃", destroy_admin_session_path, :method => :delete, class: "btn btn-danger"  

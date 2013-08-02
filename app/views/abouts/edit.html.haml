@@ -1,0 +1,28 @@
+.span10
+  %fieldset
+    %br
+    .input-prepend
+      %span.add-on 우선순위
+      = text_field_tag "priority", @editor.priority, class: "input-small", id: "priority", placeholder: "우선순위"
+    %br 
+    .input-prepend
+      %span.add-on= "    제목    "
+      = text_field_tag "title", @editor.title, class: "input-xxlarge", id: "title", placeholder: "제목을 입력하세요."
+      
+    = render partial: 'shared/editor'
+    
+    %hr
+    %label.checkbox
+      = check_box_tag "visible", "yes", @editor.visible, style: "margin-left:10px; margin-right:10px;"
+      이 항목을 활성화시킵니다.
+    %hr
+    = hidden_field_tag :id, @editor.id
+    = text_area_tag "content", @editor.content, style: "display: none;"
+      
+    %div{ style: "text-align: center; word-spacing: 20px;" }
+      = button_tag "저장", id: "modify", class: "btn btn-large btn-primary", confirm: "저장하시겠습니까?"
+      = link_to "취소", abouts_path, class: "btn btn-large btn-danger"
+
+- unless @editor.nil?
+  :javascript
+    loadContent();

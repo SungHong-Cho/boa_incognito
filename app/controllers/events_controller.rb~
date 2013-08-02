@@ -1,0 +1,60 @@
+class ClipsController < ApplicationController
+  
+  def index
+    @clips = Clip.all
+  end
+
+  def new
+  end
+
+  def create
+    title = params['title']
+    youtubeUrl = params['youtubeUrl']
+    kakaoMessage = params['kakaoMessage']
+    priority = Clip.all.count
+
+    Clip.create(title: title, 
+                 youtube_url: youtubeUrl, 
+                 kakao_message: kakaoMessage,
+                 priority: priority)
+    
+    redirect_to clips_path
+  end
+
+  def show
+    @about = About.find(params[:id])
+
+    respond_to do |format|
+      format.html  # index.html.erb
+      format.json  { render :json => @about }
+    end
+  end
+
+  def edit
+    about = About.first
+    @title = about.title
+    @content = about.content
+  end
+
+  def update
+  end
+
+  def destroy
+  end
+
+  def image_upload
+    logger.debug "hihi"
+    uploader = ImageUploader.new
+    category = "about"
+    uploader.store_category = category
+    uploader.store!(params[:image])
+    fileName = params[:image].original_filename
+    @imageurl = "http://localhost:3000/images/#{category}/#{fileName}"
+    @filename = fileName
+    @filesize = "300"
+    @imagealign = "c"
+    @originalurl = @imageurl
+    @thumburl = @originalurl
+    render layout: false
+  end
+end

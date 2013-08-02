@@ -1,0 +1,11 @@
+class Clip
+  include Mongoid::Document
+  include Mongoid::Timestamps
+  include Mongoid::Paranoia
+  
+  field :visible, type: Boolean, default: true
+  field :title, type: String
+  field :youtube_url, type: String
+  field :kakao_message, type: String
+  field :priority, type: Integer
+end

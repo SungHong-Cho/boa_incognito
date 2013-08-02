@@ -1,0 +1,20 @@
+.container
+  .row
+    .span9
+      %table.table
+        %thead
+          %tr
+            %th title
+            %th visible
+            %th created_at
+            %th priority
+            %tbody
+              - @clips.each do |entry|
+                %tr
+                  %td
+                    %a{href: "clips/#{entry.id}"}= entry.title
+                  %td= entry.visible
+                  %td= entry.created_at
+                  %td= entry.priority
+    .span9
+      = link_to "New", new_clip_path, class:"btn btn-primary"

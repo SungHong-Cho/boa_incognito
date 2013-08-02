@@ -1,0 +1,34 @@
+.container-fluid
+  = render partial: "shared/header"
+  .row-fluid
+    .span2
+      = render partial: 'shared/sidebar'
+    .span10
+      %table.table
+        %thead
+          %tr
+            %th.span1 이름
+            %th.span2 전화번호
+            %th.span2 이메일
+            %th.span2 날짜
+            %th.span3 내용
+            %th.span1 CCL
+            %th.span1 LP
+            %tbody
+              - @abouts.each do |entry|
+                %tr
+                  %td= entry.priority
+                  %td
+                    %i{class: ("icon-eye-open" if entry.visible)}
+                  %td
+                    %i.icon-arrow-up
+                    %i.icon-arrow-down
+                      = link_to "수정", edit_about_path(entry), class: "btn btn-mini btn-info"
+                      = button_to "삭제", entry, method: "delete", class: "btn btn-mini btn-danger"
+                  %td
+                    = link_to entry.title, about_path(entry)
+                  %td= entry.created_at
+      %hr
+      = link_to "New", new_about_path, class:"btn btn-primary"
+      
+= render partial: "shared/footer"

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  clip: MyString
+  event: MyString
+  consulting: MyString
+
+two:
+  clip: MyString
+  event: MyString
+  consulting: MyString

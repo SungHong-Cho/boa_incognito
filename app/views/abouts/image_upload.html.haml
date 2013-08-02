@@ -1,0 +1,32 @@
+!!! 5
+%html
+  %head
+    %script{src:"/daum_editor/js/popup.js", type:"text/javascript", charset:"utf-8"}
+    :javascript
+      function initUploader(){
+      var _opener = PopupUtil.getOpener();
+      if (!_opener) {
+      alert('잘못된 경로로 접근하셨습니다.');
+      return;
+      }
+      
+      var _attacher = getAttacher('image', _opener);
+      registerAction(_attacher);
+      
+      if (typeof(execAttach) == 'undefined') { //Virtual Function
+      return;
+      }
+      
+      var _mockdata = {
+      'imageurl': "#{@imageurl}",
+      'filename': "#{@filename}",
+      'filesize': "#{@filesize}",
+      'imagealign': "'C'",
+      'originalurl': "#{@originalurl}",
+      'thumburl': "#{@thumburl}"
+      };
+      execAttach(_mockdata);
+      closeWindow();
+      }
+
+  %body{onload: 'initUploader();'}

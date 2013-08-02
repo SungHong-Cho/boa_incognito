@@ -1,0 +1,4 @@
+$(function(){
+    loadContent();
+    $("#modify").click(function(){ saveContent(); });
+})

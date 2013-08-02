@@ -1,0 +1,158 @@
+<% content_for :js do %>
+    <script src="js/jquery.flexslider.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      $(window).load(function() {
+          $('.flexslider').flexslider();
+          animation: "slide";
+          //var dong = document.getElementById('dong');
+          //if(dong){
+          //  dong.style.height = 
+          //}
+          //winw = $(window).width();
+          //winh = $(window).height();
+
+          //var main_top = document.getElementById("main_top");
+          //var main_bottom = document.getElementById("main_bottom");
+          //main_top.style.height = (winh - (winw * 9 / 16)) / 2 + "px";
+          //main_bottom.style.height = (winh - (winw * 9 / 16)) / 2 + "px";
+      });
+     </script>
+     <% if(@event.count > 0) %>
+       <script>
+        //popup을 띄워주는 스크립트
+       $(document).on('pageshow', '#mp', function(event){
+         setTimeout(function(){
+                 $('#popup_event').popup('open');
+         },0);
+       });
+      /*$(document).on("pageinit", "#mp", function() {
+      $.mobile.changePage("#popup_event", {type: "POST", transition:"slideup", role:"dialog", changeHash:true});
+      });*/
+        </script>
+     <% end %>
+<% end %>
+    <div class="main_page">
+      <div id="main_top">
+        <div class="cclment">
+          <img src="img/main/cclMent1.png"/>
+        </div>
+      </div>
+
+      <div id="main_middle">
+<!-- 이미지 슬라이더-->
+        <div class="flexslider">
+          <ul class="slides">
+<!--<?php
+  echo $photo_count;
+  while($photo_row = mysql_fetch_array($photo_result,MYSQL_ASSOC)){
+    echo "<li>";
+      echo $photo_row[full_tag];
+    echo "</li>";
+  }
+?>-->
+            <li>
+              <img src="img/baSample1.png" />
+            </li>
+            <li>
+              <img src="img/baSample2.png" />
+            </li>
+            <li>
+              <img src="img/baSample3.png" />
+            </li>
+            <li>
+              <img src="img/baSample4.png" />
+            </li>
+            <li>
+              <img src="img/baSample5.png" />
+            </li>
+            <!-- <li>
+              <iframe id="dong" src="http://www.youtube.com/embed/kZ1Bo9xZY0A?rel=0" frameborder="0" allowfullscreen></iframe> 
+            </li> -->
+          </ul>
+        </div>
+      </div>
+      <div id="main_bottom">
+        <div class="musement">
+          <img src="img/main/cclMent2.png"/>
+        </div>
+        <div class="doswipe">
+          <img src="img/main/doSwipe.png" />
+        </div>
+        <div class="downarrow">
+          <img src="img/main/downArrow.png" />
+        </div>
+      </div>
+    </div>  <!-- Main Page 끝 -->
+
+    <div class="content_text" style="margin-top:50px; padding-top:0;">  <!-- index 본문 시작 -->
+                <hr>
+
+        <img src="img/test.png" style="width:100%; margin: 0 0 20px 0" />
+
+        <hr>
+
+
+
+        <div style="text-align:right; font-size:90%;">
+
+                <h3>원장/치의학박사<br>
+                서종진</h3>
+
+                연세대학교 치과대학 치주과 교수<br>
+                연세대학교 치과대학 치주과학교실 외래부교수<br>
+                UNIVERSITY OF TORONTO 교환교수<br>
+                대한 치주과학회 교육지도의사<br>
+                해외 IMPLANT 초청강연 (미국,독일,캐나다,호주 등 8개국)<br>
+                SCI 논문 등 다수의 국내외 의학논문 및 저서 발표<br>
+                미국 임플란트학회 정회원<br>
+                미국 치주과학회 정회원<br>
+                세계임상레이저학회(WCLI) MASTER<br>
+                세계임플란트학회 ICOI KOREA 이사<br>
+                SOLA KOREA 상임이사<br><br>
+
+                <h3>원장/치의학박사<br>
+                윤철욱</h3>
+                연세대학교 치과대학 졸업<br>
+                연세대학교 치과대학 보철학교실 치의학박사<br>
+                연세의료원 치과병원 보철과 인턴, 레지던트 수료<br>
+                대한치과보철학회 정회원 및 인정의<br>
+                대한구강악안면임플란트학회 정회원<br>
+                대한치과이식학회 정회원<br>
+                대한치과교정학회 정회원<br>
+
+        </div>
+        <hr>
+
+        <img src="img/infotest1.png" style="width:100%" />
+
+        <hr>
+
+        <img src="img/infotest2.png" style="width:100%" />
+
+        <hr>
+
+
+
+        <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.kr/maps?f=q&amp;source=s_q&amp;hl=ko&amp;geocode=&amp;q=%EB%85%BC%ED%98%84%EB%8F%99+201-6+&amp;aq=&amp;sll=37.457418,127.880859&amp;sspn=14.147883,33.815918&amp;ie=UTF8&amp;hq=&amp;hnear=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EA%B0%95%EB%82%A8%EA%B5%AC+%EB%85%BC%ED%98%84%EB%8F%99+201-6&amp;t=m&amp;ll=37.505232,127.025363&amp;spn=0.002979,0.00456&amp;z=17&amp;iwloc=A&amp;output=embed"></iframe>
+
+
+        <hr>
+
+        <img src="img/infotest3.png" style="width:100%" />
+    </div>
+
+<!--    이벤트 팝업 페이지      -->
+<%  if(@event.count > 0) %>
+    <div data-role="popup" id="popup_event" data-history="false" data-overlay-theme="a" data-theme="d" data-corners="false">
+      <a href="index.php" data-role="button" data-theme="a" data-rel="back" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+      <div class="popup_image">
+<%= "<img src='@event.thumb'>" %>
+      </div>
+      <div class="popup_button">
+        <a href="event.php" data-role="button" data-ajax="false" data-inline="true" data-transition="flow" data-theme="a">참여하기</a>
+        <a href="index.php" data-role="button" data-rel="back" data-inline="true" data-theme="c">닫기</a>
+      </div>
+    </div>
+
+<% end %>
+

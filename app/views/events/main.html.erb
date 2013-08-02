@@ -1,0 +1,14 @@
+<div class="content_text">
+
+  <% @events.each do |event| %>
+    <div class='event'>
+      <img src='<%=event.thumb %>'>;
+      <div class='comment'>
+        <%=event.content %>
+      </div>
+    </div>
+<% end %>
+
+</div>
+
+

@@ -1,0 +1,14 @@
+%ul.nav.nav-tabs.nav-stacked
+  %li
+    = link_to "Menu", "#"
+  %li{class: ("active" if current_page?(controller: "abouts"))}
+    = link_to "CCL About", abouts_path
+  %li
+    = link_to "Main", "/"
+  %li{class: ("active" if current_page?(controller: "events"))}
+    = link_to "Event", events_path
+  %li{class: ("active" if current_page?(controller: "clips"))}
+    = link_to "Clip", clips_path
+  %li{class: ("active" if current_page?(controller: "consultings"))}
+    = link_to "Consulting", consultings_path
+  

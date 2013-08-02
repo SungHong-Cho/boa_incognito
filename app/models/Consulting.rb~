@@ -1,0 +1,11 @@
+class Consulting
+  include Mongoid::Document
+  include Mongoid::Timestamps
+  include Mongoid::Paranoia
+  
+  field :visible, type: Boolean, default: true
+  field :title, type: String
+  field :content, type: String
+  field :thumb_image, type: String
+  field :priority, type: Integer
+end

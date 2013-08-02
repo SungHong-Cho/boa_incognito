@@ -1,0 +1,26 @@
+.container-fluid
+  = render partial: "shared/header"
+  .row-fluid
+    .span2
+      = render partial: 'shared/sidebar'
+    .span10
+      %form
+        %fieldset
+          %div{style:"border:1px solid #eee; width:100%;"}
+            = @clip.title
+          %br
+          %div{style:"border:1px solid #eee; width:100%; height:auto;"}
+            = @clip.youtubeUrl
+          .clip_element
+            .movie_area
+              %iframe{width: "1024", height: "315", src: @clip.youtubeUrl, frameborder: "0", allowfullscreen}
+          %hr
+          %label.checkbox
+            = check_box_tag "visible", "yes", false, checked: ("checked" unless @clip.visible), disabled: true, style: "margin-left:10px; margin-right:10px;"
+            this article is visible.
+            
+          %hr
+          = link_to "modify", edit_about_path(@clip), class: "btn btn-primary"
+          = link_to "cancel", abouts_path, class: "btn btn-danger"
+        
+= render partial: "shared/footer"

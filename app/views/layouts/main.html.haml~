@@ -1,0 +1,13 @@
+!!! 5
+%html
+  %head
+    %title CCL MUSE
+    = stylesheet_link_tag "main"
+    = javascript_include_tag "main_head_javascripts"
+
+  %body
+      %div{id: "mp", data: {role: "page"}}
+        = render partial: "shared/header_common"
+        = yield
+        = render partial: "shared/footer_common"
+      = yield :js

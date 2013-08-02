@@ -1,0 +1,21 @@
+.span10
+  %table.table
+    %thead
+      %tr
+        %th.span2 이름
+        %th.span2 전화
+        %th.span2 이메일
+        %th.span2 날짜
+        %th.span3 내용
+        %th.span2 관심분야
+
+    %tbody
+      - @consultings.each do |entry|
+        %tr
+          %td= entry.name
+          %td= entry.number
+          %td= entry.email
+          %td= entry.date
+          %td
+            = link_to entry.comment, consulting_path(entry)
+          %td= make_consulting_string(entry)

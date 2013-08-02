@@ -1,0 +1,13 @@
+<%= form_for Picture.new do |f| %>
+  <%= f.label :image, "Upload paintings:" %>
+  <%= f.file_field :image, multiple: true, name: "picture[image]" %>
+<% end %>
+
+<% content_for :js do %>
+<script id="template-upload" type="text/x-tmpl">
+  <div class="upload">
+    {%=o.name%}
+    <div class="progress"><div class="bar" style="width: 0%"></div></div>
+  </div>
+</script>
+<% end %>

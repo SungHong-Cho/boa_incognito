@@ -1,0 +1,6 @@
+class About
+  include Mongoid::Document
+  field :clip, type: String
+  field :event, type: String
+  field :consulting, type: String
+end

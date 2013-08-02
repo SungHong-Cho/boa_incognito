@@ -1,0 +1,19 @@
+!!! 5
+%html
+  %head
+    %title CCL MUSE
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
+    = stylesheet_link_tag "main"
+    = stylesheet_link_tag "http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css"
+    = javascript_include_tag "main_head_javascripts"
+    = javascript_include_tag "http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"
+    = javascript_include_tag "http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"
+    = javascript_include_tag "http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"
+    
+
+  %body
+    %div{id: "mp", data: {role: "page"}}
+      = render partial: "shared/header_common"
+      = yield
+      = render partial: "shared/footer_common"
+      = yield :js

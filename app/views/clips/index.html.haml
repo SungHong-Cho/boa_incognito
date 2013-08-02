@@ -1,0 +1,26 @@
+.span10
+  %table.table
+    %thead
+      %tr
+        %th.span1{style: "text-align:center; background-color:#fcfcfc;"} 우선순위
+        %th.span1{style: "text-align:center;"} 활성화
+        %th.span6{style: "text-align:center;"} 제목
+        %th.span2{style: "text-align:center; background-color:#fcfcfc;"} 만든 날짜
+        %th.span2{style: "text-align:center; background-color:#fcfcfc;"} 상태
+    %tbody
+      - @clips.each do |entry|
+        %tr
+          %td= entry.priority
+          %td
+            %i{class: ("icon-eye-open" if entry.visible)}
+          
+          %td
+            = link_to entry.title, "/clips/#{entry.id}"
+          %td= entry.created_at
+          %td
+            %i.icon-arrow-up
+            %i.icon-arrow-down
+            = link_to "수정", edit_clip_path(entry), class: "btn btn-mini btn-info"
+            = button_to "삭제", "/clips/#{entry.id}", method: "delete", class: "btn btn-mini btn-danger", style: "display:inline-block;"
+  %hr
+  = link_to "새로 만들기", new_clip_path, class:"btn btn-primary"

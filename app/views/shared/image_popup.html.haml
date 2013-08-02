@@ -1,0 +1,40 @@
+!!! 5
+%html
+  %head
+    %title CCL MUSE
+    = stylesheet_link_tag "admin"
+    = javascript_include_tag "admin_head_javascripts"
+    = csrf_meta_tag
+    %link{rel: 'stylesheet', href: '/daum_editor/css/popup.css', type: 'text/css', charset: 'utf-8'}
+    %script{src:'/daum_editor/js/popup.js', type: 'text/javascript', charset: 'utf-8'}
+      :javascript
+        daumEditorConfig = {
+        uploadImageAction: "#{"/" + controller.controller_name + '/image_upload'}",
+        model_name : "#{@editor.class.to_s.downcase}"
+        };
+        function initUploader(){
+        var _opener = PopupUtil.getOpener();
+        if (!_opener) {
+        alert('잘못된 경로로 접근하셨습니다.');
+        return;
+        }
+        
+        var _attacher = getAttacher('image', _opener);
+        registerAction(_attacher);
+        }
+        
+  %body{ onload: "initUploader();" }
+    .wrapper
+      .header
+        %h1 사진첨부{style: "line-height: 20px;"}
+      .body
+        %dl.alert
+          %dt 사진 첨부 확인
+          %dd '이미지 찾기..'를 눌러서 이미지를 첨부해주세요! 하나에 한 개만 됩니다.
+          %br
+      = form_tag controller.image_upload_path, method: "POST", multipart: true, style: "text-align: center;" do
+        = file_field_tag "image"
+        %br
+        %br
+        = submit_tag "등록", class: "btn btn-primary"
+        = link_to "취소", "#", class: "btn btn-danger", onclick: "closeWindow();"

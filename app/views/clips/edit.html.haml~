@@ -1,0 +1,27 @@
+.container-fluid
+  = render partial: "shared/header"
+  .row-fluid
+    .span2
+      = render partial: 'shared/sidebar'
+    .span10
+      = form_tag clips_path, method: "POST" do
+        %fieldset
+          %label
+            title
+            %br
+            = text_field_tag 'title', nil, class: "input-xxlarge", placeholder: "title??"
+            %br
+          %label
+            Youtube URL
+            %br
+            = text_field_tag 'youtubeUrl', nil, class: "input-xxlarge", placeholder: "youtubeUrl??"
+          %hr
+          %label.checkbox
+            = check_box_tag "visible", "yes", false, style: "margin-left:10px; margin-right:10px;"
+            this article is visible.
+            
+          %hr
+          = submit_tag "submit", class: "btn btn-primary"
+          = link_to "cancel", clips_path, class: "btn btn-danger"
+        
+= render partial: "shared/footer"

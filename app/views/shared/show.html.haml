@@ -1,0 +1,23 @@
+.span10
+  %table.table.table-bordered
+    %tbody
+      %tr
+        %th.span2 제목
+        %td.span4= @editor.title
+        %th.span2 우선순위
+        %td.span1= @editor.priority
+        %th.span2 활성화
+        %td.span1
+          %i{class: ("icon-eye-open" if @editor.visible)}
+      - if controller.controller_name == "events"
+        %tr
+          %th.span2 썸네일
+          %td.span10{colspan: "5"}= image_tag(@editor.thumb_image.url)
+      %tr
+        %th.span2 내용
+        %td.span10{colspan: "5"}= raw @editor.content
+            
+  %hr
+  %div{ style: "text-align: center; word-spacing: 20px;" }
+    = link_to "수정", controller.edit_path(@editor), class: "btn btn-large btn-info"
+    = link_to "목록", controller.index_path, class: "btn btn-large btn-primary"

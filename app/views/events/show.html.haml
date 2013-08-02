@@ -1,0 +1,26 @@
+.container-fluid
+  = render partial: "shared/header"
+  .row-fluid
+    .span2
+      = render partial: 'shared/sidebar'
+    .span10
+      %form
+        %fieldset
+          %div{style:"border:1px solid #eee; width:100%;"}
+            = @event.title
+          %br
+          %div{style:"border:1px solid #eee; width:100%; height:auto;"}
+            = @event.content
+          %br
+          %div.thumb
+            = image_path("images/event/thumb" + (@event.nil? ? "" : @event.thumb_image))
+          %hr
+          %label.checkbox
+            = check_box_tag "visible", "yes", false, checked: ("checked" unless @event.visible), disabled: true, style: "margin-left:10px; margin-right:10px;"
+            이 항목을 활성화시킵니다.
+            
+          %hr
+          = link_to "수정", edit_event_path(@event), class: "btn btn-primary"
+          = link_to "취소", event_path, class: "btn btn-danger"
+        
+/= render partial: "shared/footer"

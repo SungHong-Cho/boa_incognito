@@ -1,0 +1,25 @@
+!!! 5
+%html
+  %head
+    %title CCL MUSE
+    - if controller.controller_name == "main"
+      = render partial: "shared/in_head_common"
+    %link{rel: "stylesheet", href: "#{request.scheme}://#{request.host_with_port}/#{request.script_name}daumeditor/css/editor.css", type: "text/css", charset: "utf-8"}
+    %script{src: "#{request.scheme}://#{request.host_with_port}/#{request.script_name}daumeditor/js/editor_loader.js?environment=development", type: "text/javascript", charset: "utf-8"}
+    = stylesheet_link_tag "application", :media => "all"
+    = csrf_meta_tags
+
+  %body
+    - if controller.controller_name == "main"
+      %div{id: "mp", data: {role: "page"}}
+        = render partial: "shared/header_common"
+        = yield
+        = render partial: "shared/footer_common"
+      = javascript_include_tag "application"
+      = yield :js
+
+    - else
+      = yield
+      = javascript_include_tag "application"
+      = yield :js
+
