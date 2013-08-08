@@ -13,14 +13,94 @@
  */
 .admin_header {
     background: image-url("header_pattern.png") repeat-x center top;
-    text-align: center;
+    //text-align: center;
     margin-bottom: 2em;
+    
+    .title_bar{
+      width:100%;
+      height:30px;
+      background: #404040;
+      box-shadow: 10px 0 10px #232323;
+      font-size:1.3em;
+      font-weight:bold;
+      color:white;
+      padding: 10px 0px 5px;
+
+      .right_helpdoc{
+        display: inline;
+	float:right;
+	margin-right:10px;
+
+	.font_doc{
+	  display:inline;
+          color:#8f8f8f;
+	}
+      }
+
+      .site_url{
+        margin-left:10px;
+      }
+
+    }
+    .admin_logo{
+      padding: 10px 15px;
+      clear:both;
+      vertical-align:bottom;
+      
+      font-size:2.3em;
+      font-weight:bold;
+      color:black;
+
+      .lower_font{
+        font-size:0.85em;
+	font-weight:bold;
+	color:gray;
+	display: inline;
+      }
+    }
 }
 
 .admin_footer {
-    background: image-url("footer_pattern.png") repeat-x center top;
-    text-align: center;
+    text-align: left;
     margin-top: 2em;
+    font-weight:bold;
+    font-size:1em;
+    padding:20px;
+   
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #AEB3B5 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #AEB3B5 100%);
+
+    /* Opera */ 
+    background-image: -o-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #AEB3B5 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(radial, center center, 0, center center, 505, color-stop(0, #FFFFFF), color-stop(1, #AEB3B5));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #AEB3B5 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: radial-gradient(ellipse farthest-corner at center, #FFFFFF 0%, #AEB3B5 100%);
+
+    .skyseed_logo{
+      font-size:1em;
+      
+      .sky{
+	margin-left:10px;
+	color:#489CFF;
+      }
+      .seed{
+	color:#1245AB;
+	margin-left: -8px;
+      }
+      .tel_lower{
+        font-size:1em;
+	color:black;
+      }
+    }
 }
 
 .admin_body {

@@ -1,26 +1,17 @@
 class AboutsController < ApplicationController
   before_filter :authenticate_admin!, except: [:image_upload]
 
-  def authenticate_admin!
-    puts "authenticate : " + params.to_s+ "session : " + session.to_s
-    super
-  end
   def main
     @abouts = About.all.asc(:priority)
   end
 
   def index
-    puts "index : " + params.to_s+ "session : " + session.to_s
     @entries = About.all.asc(:priority)
     render "shared/index"
   end
 
   def new
-
-    @editor = About.new
-    @url = abouts_path
-    @method = "POST"
-    render "shared/new"
+    @about = About.new
   end
 
   def create
@@ -29,23 +20,16 @@ class AboutsController < ApplicationController
   end
 
   def show
-    puts "show: " + params.to_s + "session : " + session.to_s
-    @editor = About.find(params[:id])
-    render "shared/show"
+    @about = About.find(params[:id])
   end
 
   def edit
-    puts "edit: " + params.to_s + "session : " + session.to_s
-    @editor = About.find(params[:id])
-    @url = about_path(@editor)
-    @method = "PUT"
-    render "shared/edit"
+    @about = About.find(params[:id])
   end
 
   def update
-    puts "update: " + params.to_s + "session : " + session.to_s
     @about = About.find(params[:about][:id])
-    @about.update_attributes(priority: params[:about][:priority], title: params[:about][:title], content: params[:about][:content], visible: params[:about][:visible])
+    @about.update_attributes(priority: params[:about][:priority], title: params[:about][:title], visible: params[:about][:visible])
     @about.save
     redirect_to index_path
   end
@@ -53,24 +37,6 @@ class AboutsController < ApplicationController
   def destroy
     About.find(params[:id]).destroy
    redirect_to abouts_path
-  end
-
-  def image_popup
-    render "shared/image_popup", layout: false
-  end
-
-  def image_upload
-    Image.mount_uploader(:about, ImageUploader)
-    image = Image.new
-    image.about = (params[:image])
-    image.save!
-
-    @imageurl = @originalurl = @thumburl = image.about.url
-    @filename = image.about.filename
-    @filesize = image.about.size
-    @imagealign = "c"
-
-    render layout: false
   end
 
   # remake path.

@@ -9,9 +9,6 @@ class Consulting
   field :datetime, type: DateTime
   field :file_name, type: String, default: ""
   field :comment, type: String
-  field :med_ccl, type: Boolean, default: false
-  field :med_lp, type: Boolean, default: false
-  field :med_tooth, type: Boolean, default: false
 
   mount_uploader :image, ImageUploader
 end

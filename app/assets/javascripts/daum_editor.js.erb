@@ -43,7 +43,7 @@ function setForm(editor) {
 
     // thumbnail 이미지를 필드생성하여 첨부.
     if(!!document.getElementById('thumb_image')){
-        var thumb_image = document.getElementById('thumb_image').cloneNode(true);
+        var thumb_image = document.getElementById('thumb_image');
         thumb_image.name = daumEditorConfig.model_name + '[thumb_image]';
         form.createField(thumb_image);
         }

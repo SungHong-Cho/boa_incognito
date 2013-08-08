@@ -1,7 +1,7 @@
 !!! 5
 %html
   %head
-    %title CCL MUSE
+    %title Boa치과 CCD Incognito
     - if controller.controller_name == "main"
       = render partial: "shared/in_head_common"
     %link{rel: "stylesheet", href: "#{request.scheme}://#{request.host_with_port}/#{request.script_name}daumeditor/css/editor.css", type: "text/css", charset: "utf-8"}
@@ -22,4 +22,3 @@
       = yield
       = javascript_include_tag "application"
       = yield :js
-

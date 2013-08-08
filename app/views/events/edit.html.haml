@@ -12,7 +12,7 @@
     = button_tag "수정", type:"button", id: "modify", class: "btn btn-primary", confirm: "수정하시겠습니까?"
     = link_to "취소", events_path, class: "btn btn-danger"
 
-- content_for :js do
+- content_for :jsp do
   :javascript
     /* 예제용 함수 */
     function saveContent() {

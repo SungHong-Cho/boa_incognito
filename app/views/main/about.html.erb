@@ -1,8 +1,25 @@
-<div class="content_text" style="margin-top:50px; padding-top:0;">  <!-- aboutccl 본문 시작 -->
+<div class="content_text">  <!-- aboutccl 본문 시작 -->
+   <img src="/img/before_after/before_after_page_top.png" class="width_full">
+   <img src="/img/before_after/before_after_page_listment.png" class="width_full">
+     <% @abouts.each_with_index do |about, index| %>
+         
+       <div class="about">
 
-     <% @abouts.each do |about| %>
-       <h1><%= about.title %></h1>
-       <%=raw about.content %> 
+         <div class="name_area">
+	   <span class="case">
+	      CASE <%= index + 1 %>
+	   </span>
+           <span class="name">
+	      <%= about.title %>
+	   </span>
+	 </div>
+
+	 <div class="photo">
+           <img src='<%=about.ba_image %>' class="width_full">
+         </div>
+
+       </div>
+
      <% end %>
 </div>  <!-- aboutccl 본문 끝 -->
 

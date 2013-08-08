@@ -1,7 +1,7 @@
 !!! 5
 %html
   %head
-    %title CCL MUSE
+    %title Boa Incognito 
     = stylesheet_link_tag "admin"
     = javascript_include_tag "admin_head_javascripts"
     = csrf_meta_tag
@@ -15,8 +15,16 @@
       %script{src:'/daum_editor/js/editor_loader.js', type: 'text/javascript', charset: 'utf-8'}
   %body
     .admin_header
-      = image_tag("header.png")
-
+      .title_bar
+        %span.site_url m.boaortho.com 
+        .right_helpdoc
+          %span Help
+          .font_doc
+            %span DOC
+      .admin_logo
+        %span 보아치과 CCD Incognito 모바일 사이트
+        .lower_font
+          %span 관리자 모드
     .admin_body
       - if admin_signed_in?
         .container-fluid
@@ -28,7 +36,12 @@
         = yield
         
     .admin_footer
-      = image_tag("footer.png")
+      .skyseed_logo
+        %p 제작: SKYSEED
+        %p Tel: 02-499-3111
+        //%span.sky SKY
+        /%span.seed SEED
+        /%span.tel_lower (Tel. 02-499-3111)
 
   - if (controller.controller_name == "abouts" || controller.controller_name == "events") && (controller.action_name == "new" || controller.action_name == "edit")
     = javascript_include_tag "admin_foot_javascripts"

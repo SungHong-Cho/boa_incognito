@@ -1,14 +1,20 @@
 <div class="content_text">
+  <img src='/img/event/event_page_top.png' class="width_full">
+  <% if @events.length > 0 %>
+    <% @events.each do |event| %>
+      <div class='event'>
+        <img src='<%=event.thumb_image %>'>
 
-  <% @events.each do |event| %>
-    <div class='event'>
-      <img src='<%=event.thumb_image %>'>
-      <div class='comment'>
-        <%=raw event.content %>
+        <div class='comment'>
+          <%=raw event.content %>
+        </div>
+        <hr>
       </div>
-    </div>
-<% end %>
-
+    <% end %>
+  <% else %>
+    <img src='/img/event/event_default.png' class="width_full">
+  <% end %>
+  
 </div>
 
 

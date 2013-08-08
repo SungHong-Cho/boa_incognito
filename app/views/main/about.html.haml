@@ -1,4 +1,6 @@
 .content_text{style: "margin-top:50px; padding-top:0;"}
+  = image_tag "/img/before_after/before_after_page_top.png", class: 'width_full'
+  = image_tag "/img/before_after/before_after_page_listment.png", class: 'width_full'
   - @abouts.each do |about|
     %h1= about.title
     = about.content

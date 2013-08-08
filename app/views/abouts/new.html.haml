@@ -1,23 +1,59 @@
 .span10
-  %fieldset
-    %br
-    .input-prepend
-      %span.add-on 우선순위
-      = text_field_tag "priority", @editor.priority, class: "input-small", id: "priority", placeholder: "우선순위"
-    %br 
-    .input-prepend
-      %span.add-on= "    제목    "
-      = text_field_tag "title", @editor.title, class: "input-xxlarge", id: "title", placeholder: "제목을 입력하세요."
-      
-    = render partial: 'shared/editor'
-    
+  = form_tag abouts_path, method: "POST", class: "form-horizontal", multipart: true do
+    .control-group
+      %label.control-label
+        우선순위
+      .controls
+        =text_field_tag 'about[priority]', @about.priority, class: "input-small", placeholder: "우선순위"
+    .control-group
+      %label.control-label
+        시술 종류
+      .controls
+        =text_field_tag 'about[title]', @about.title, class: "input-xxlarge", placeholder: "시술 종류를 입력하세요."
+    .control-group
+      %label.control-label
+        이미지 
+      .controls
+        =file_field_tag 'about[ba_image]', :accept => 'image/png, image/gif, image/jpeg'
+
     %hr
-    %label.checkbox
-      = check_box_tag "visible", "yes", @editor.visible, style: "margin-left:10px; margin-right:10px;"
-      이 항목을 활성화시킵니다.
+      .control-group
+        %label.controls.checkbox
+          = check_box_tag "about[visible]", "true"
+          이 항목을 활성화시킵니다.
     %hr
-    = hidden_field_tag(:id, @editor.id)
-      
+
     %div{ style: "text-align: center; word-spacing: 20px;" }
-      = button_tag "저장", id: "modify", class: "btn btn-large btn-primary", confirm: "저장하시겠습니까?"
-      = link_to "취소", abouts_path, class: "btn btn-large btn-danger"
+      = submit_tag "저장", class: "btn btn-large btn-primary"
+      = link_to "취소", clips_path, class: "btn btn-large btn-danger"
+/  %fieldset
+/    %br
+/    - if controller.controller_name == "abouts"
+/      .input-prepend
+/        %span.add-on 이미지
+/        = file_field_tag "ba_image", :accept => 'image/png,image/gif,image/jpeg'
+/    %br
+/    .input-prepend
+/      %span.add-on 우선순위
+/      = text_field_tag "priority", @editor.priority, class: "input-small", id: "priority", placeholder: "우선순위"
+/    %br 
+/    .input-prepend
+/      %span.add-on= " 시술 종류  "
+/      = text_field_tag "title", @editor.title, class: "input-xxlarge", id: "title", placeholder: "제목을 입력하세요."
+/      
+/    = render partial: 'shared/editor'
+/    
+/    %hr
+/    %label.checkbox
+/      = check_box_tag "visible", "yes", @editor.visible, style: "margin-left:10px; margin-right:10px;"
+/      이 항목을 활성화시킵니다.
+/    %hr
+/    = hidden_field_tag(:id, @editor.id)
+/      
+/    %div{ style: "text-align: center; word-spacing: 20px;" }
+/      = button_tag "저장", id: "modify", class: "btn btn-large btn-primary", confirm: "저장하시겠습니까?"
+/      = link_to "취소", abouts_path, class: "btn btn-large btn-danger"
+
+/  %div{data: {role: "fieldcontain"}}
+/    = f.label :image, "내 치아사진 올리기"
+/    = f.file_field :image
