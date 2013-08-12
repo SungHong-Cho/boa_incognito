@@ -109,12 +109,18 @@ html, body{
 
 }
 
+.corp_info a:active{ text-decoration:none; color:#ffffff;}
+.corp_info a:hover{ text-decoration:none; color:#ffffff;}
+.corp_info a:visited{ text-decoration:none; color:#ffffff;}
+.corp_info a:link{ text-decoration:none; color:#ffffff;}
+
 .corp_info .left{
 	float:left;
 }
 
 .corp_info .right{
 	float:right;
+        margin: 1.2em 0.7em 0 0;
 }
 
 .width_full{
