@@ -137,14 +137,14 @@ html, body{
 
 /*--------------------전화걸기--------------------------*/
 .consulting_call {
-background: url("/img/common/pattern_blue.png") repeat;
+background:url("/img/index/call_pattern.png") repeat;
 display: block;
 height: 2em;
 padding: 0.85em 0 1em 0;
 }
 
 .consulting_call .title {
-    color: white;
+    color: #91743C;
     font-size: 1em;
     text-align:center;
     text-shadow: none;
