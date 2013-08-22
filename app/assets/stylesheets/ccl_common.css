@@ -42,13 +42,17 @@ html, body{
 .main_header .nu{
 	float:right;
 	margin-right:15px;
-/*	width:47px; */
-/*	height:10px;*/
+	height:50px;
 	display:inline-block;
 }
 
 .main_header .nu img{
         height:50px; 
+}
+
+.main_header .nu span{
+	display:block;
+	margin-top:13px;
 }
 
 .main_header .nu a:link {text-decoration:none; color:#fff;}

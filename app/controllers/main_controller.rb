@@ -20,4 +20,14 @@ class MainController < ApplicationController
   def consulting
     @consulting = Consulting.new
   end
+
+  def progress 
+  end
+
+  def feature
+  end
+
+  def kakao
+  end
+
 end
