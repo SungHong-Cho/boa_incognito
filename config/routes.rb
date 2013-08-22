@@ -7,6 +7,9 @@ CclMuse::Application.routes.draw do
   match "clip" => 'main#clip', as: "clip_main"
   match "event" => 'main#event', as: "event_main"
   match "consulting" => 'main#consulting', as: "consulting_main"
+  match "progress" => 'main#progress', as: "progress_main"
+  match "feature" => 'main#feature', as: "feature_main"
+  match "kakao" => 'main#kakao', as: "kakao_main"
   match "admin" => 'abouts#index'
 
   root to: "main#index"
