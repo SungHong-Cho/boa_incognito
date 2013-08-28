@@ -28,6 +28,7 @@ namespace :db do
   desc "Make symlink for mongo yaml"
   task :symlink do
     run "ln -nfs #{shared_path}/config/mongo.yml #{release_path}/config/mongo.yml"
+  end
 end
 
 after "deploy", "deploy:cleanup" # keep only the last 5 releases
