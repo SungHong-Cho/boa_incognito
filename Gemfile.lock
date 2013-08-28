@@ -180,6 +180,7 @@ DEPENDENCIES
   carrierwave-mongoid
   coffee-rails (~> 3.2.1)
   devise
+  haml
   haml-rails (>= 0.3.4)
   jquery-mobile-rails
   jquery-rails
