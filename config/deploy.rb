@@ -16,6 +16,20 @@ set :branch, "master"
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
+before "deploy:setup", :db
+after "deploy:update_code", "db:symlink"
+
+namespace :db do
+  desc "Create database yaml in shared path"
+  task :default do
+
+  end
+
+  desc "Make symlink for mongo yaml"
+  task :symlink do
+    run "ln -nfs #{shared_path}/config/mongo.yml #{release_path}/config/mongo.yml"
+end
+
 after "deploy", "deploy:cleanup" # keep only the last 5 releases
 
 namespace :deploy do
@@ -30,7 +44,7 @@ namespace :deploy do
     sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
     sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
     sudo "mkdir -p #{shared_path}/config"
-    put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
+    #put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
     puts "Now edit the config files in #{shared_path}."
   end
   after "deploy:setup", "deploy:setup_config"
