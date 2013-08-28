@@ -11,4 +11,5 @@ class Consulting
   field :comment, type: String
   field :med_ccl, type: Boolean, default: true
   field :med_lp, type: Boolean, default: true
-End
+
+end

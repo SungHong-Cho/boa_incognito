@@ -33,7 +33,7 @@ end
 gem 'carrierwave'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 
-gem 'rmagick'
+gem 'rmagick', "~> 2.13.1"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
