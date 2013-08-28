@@ -78,3 +78,14 @@ test:
         # low amounts for fast failures.
         max_retries: 1
         retry_interval: 0
+
+production:
+  sessions:
+    default:
+      database: ccl_muse_production
+      hosts:
+        - localhost:27017
+      username: clinic
+      password: bbooa0617
+      options:
+        consistency: :strong
