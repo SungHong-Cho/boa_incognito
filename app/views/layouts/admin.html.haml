@@ -2,8 +2,8 @@
 %html
   %head
     %title Boa Incognito 
-    = stylesheet_link_tag "admin"
-    = javascript_include_tag "admin_head_javascripts"
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
     = csrf_meta_tag
     %link{rel: 'stylesheet', href: '/daum_editor/css/editor.css', type: 'text/css', charset: 'utf-8'}
     - if controller.action_name == "new" || controller.action_name == "edit" 
@@ -43,8 +43,8 @@
         /%span.seed SEED
         /%span.tel_lower (Tel. 02-499-3111)
 
-  - if (controller.controller_name == "abouts" || controller.controller_name == "events") && (controller.action_name == "new" || controller.action_name == "edit")
-    = javascript_include_tag "admin_foot_javascripts"
+  /- if (controller.controller_name == "abouts" || controller.controller_name == "events") && (controller.action_name == "new" || controller.action_name == "edit")
+    /= javascript_include_tag "admin_foot_javascripts"
 
   
     
