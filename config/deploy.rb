@@ -11,7 +11,7 @@ set :user_sudo, false
 set :scm, "git"
 set :repository,  "git@github.com:SungHong-Cho/#{application}.git"
 set :branch, "master"
-
+set :default_enviroment, { 'Path' => "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH" }
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
