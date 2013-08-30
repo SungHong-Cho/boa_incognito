@@ -2,11 +2,28 @@
 <% content_for :js do %>
     <script src="flexslider/jquery.flexslider.js"></script>
     <script type="text/javascript" charset="utf-8">
-      $(window).load(function() {
+/*      $(window).load(function() {
           $('.flexslider').flexslider();
           animation: "slide";
       });
-      
+*/
+         $(window).load(function(){
+	   $('.flexslider').flexslider({
+             animation:"slide",
+	     keyboardNav:false,
+	     mousewheel:false,
+	     pausePlay:false,
+	     randomize:false,
+	     slideToStart:0,
+	     animationLoop:true,
+	     pauseOnAction:false,
+	     pauseOnHover:false,
+	     start: function(){},
+	     before: function(){},
+	     after: function(slider){ slider.pause(); slider.resume();},
+	     end: function(){}
+	   });
+	 });
      </script>
 
      <% if(@event) %>
