@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 <% content_for :js do %>
     <script src="flexslider/jquery.flexslider.js"></script>
+    <link href="flexslider/flexslider.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" charset="utf-8">
 /*      $(window).load(function() {
           $('.flexslider').flexslider();
@@ -10,7 +11,13 @@
          $(window).load(function(){
 	   $('.flexslider').flexslider({
              animation:"slide",
+	     slideDirection: "horizontal",
+	     slideshow: true,
+	     slideshowSpeed: 4000,
+	     animationDuration: 500,
 	     keyboardNav:false,
+	     directionNav:true,
+	     controlNav:true,
 	     mousewheel:false,
 	     pausePlay:false,
 	     randomize:false,
@@ -18,9 +25,11 @@
 	     animationLoop:true,
 	     pauseOnAction:false,
 	     pauseOnHover:false,
-	     start: function(){},
+	     start: function(){
+	     },
 	     before: function(){},
-	     after: function(slider){ slider.pause(); slider.resume();},
+	     after: function(){ 
+	     },
 	     end: function(){}
 	   });
 	 });
