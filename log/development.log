@@ -13943,3 +13943,299 @@ Served asset /main_head_javascripts.js - 304 Not Modified (1ms)
 
 Started GET "/assets/jqueryFileUpload_custom.js?body=1" for 127.0.0.1 at 2013-09-05 16:02:46 +0900
 Served asset /jqueryFileUpload_custom.js - 304 Not Modified (0ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (39.7222ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (29.5033ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7432ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-05 10:48:21 +0900
+Processing by MainController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (41.6780ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7410ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8199ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2183ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8769ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6747ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4694ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7210ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8047ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9413ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7756ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6429ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8554ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6518ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6473ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9630ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2105ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8845ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.9314ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (4.9858ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7317ms)
+Completed 500 Internal Server Error in 5110ms
+
+Moped::Errors::ConnectionFailure (Could not connect to any secondary or primary nodes for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>):
+  app/controllers/main_controller.rb:5:in `index'
+
+
+  Rendered /home/ryze-ubuntu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.6ms)
+  Rendered /home/ryze-ubuntu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/ryze-ubuntu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.2ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (45.0511ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0599ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-05 10:57:26 +0900
+Processing by MainController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (39.3043ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=ccl_muse_development collection=events selector={"$query"=>{"deleted_at"=>nil, "visible"=>true}, "$orderby"=>{"created_at"=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4365ms)
+  Rendered shared/_consulting_request_form.html.haml (19.5ms)
+  Rendered main/index.html.erb within layouts/main (31.3ms)
+Compiled twitter-bootstrap-static/bootstrap.css  (28ms)  (pid 14302)
+Compiled twitter-bootstrap-static/fontawesome.css  (11ms)  (pid 14302)
+Compiled bootstrap_and_overrides.css  (105ms)  (pid 14302)
+Compiled admin.css  (236ms)  (pid 14302)
+Compiled application.css  (275ms)  (pid 14302)
+Compiled jquery.js  (46ms)  (pid 14302)
+Compiled jquery_ujs.js  (0ms)  (pid 14302)
+Compiled twitter/bootstrap/bootstrap-transition.js  (0ms)  (pid 14302)
+Compiled twitter/bootstrap/bootstrap-alert.js  (0ms)  (pid 14302)
+Compiled twitter/bootstrap/bootstrap-modal.js  (0ms)  (pid 14302)
+Compiled twitter/bootstrap/bootstrap-dropdown.js  (0ms)  (pid 14302)
+Compiled twitter/bootstrap/bootstrap-scrollspy.js  (0ms)  (pid 14302)
+Compiled twitter/bootstrap/bootstrap-tab.js  (0ms)  (pid 14302)
+Compiled twitter/bootstrap/bootstrap-tooltip.js  (0ms)  (pid 14302)
+Compiled twitter/bootstrap/bootstrap-popover.js  (0ms)  (pid 14302)
+Compiled twitter/bootstrap/bootstrap-button.js  (0ms)  (pid 14302)
+Compiled twitter/bootstrap/bootstrap-collapse.js  (0ms)  (pid 14302)
+Compiled twitter/bootstrap/bootstrap-carousel.js  (0ms)  (pid 14302)
+Compiled twitter/bootstrap/bootstrap-typeahead.js  (0ms)  (pid 14302)
+Compiled twitter/bootstrap/bootstrap-affix.js  (0ms)  (pid 14302)
+Compiled twitter/bootstrap.js  (48ms)  (pid 14302)
+Compiled admin_head_javascripts.js  (1ms)  (pid 14302)
+Compiled main_head_javascripts.js  (1ms)  (pid 14302)
+Compiled application.js  (146ms)  (pid 14302)
+  Rendered shared/_header_common.html.erb (0.3ms)
+  Rendered shared/_footer_common.html.erb (0.3ms)
+Completed 200 OK in 666ms (Views: 593.3ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 127.0.0.1 at 2014-03-05 10:57:27 +0900
+Served asset /jquery.fileupload-ui.css - 200 OK (1ms)
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2014-03-05 10:57:27 +0900
+Served asset /about.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-03-05 10:57:27 +0900
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (4ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-03-05 10:57:27 +0900
+Served asset /bootstrap_and_overrides.css - 200 OK (64ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-05 10:57:27 +0900
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (7ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-03-05 10:57:27 +0900
+Served asset /admin.css - 200 OK (10ms)
+
+
+Started GET "/assets/ccl.min.css?body=1" for 127.0.0.1 at 2014-03-05 10:57:27 +0900
+Served asset /ccl.min.css - 200 OK (2ms)
+
+
+Started GET "/assets/ccl_thema.min.css?body=1" for 127.0.0.1 at 2014-03-05 10:57:27 +0900
+Served asset /ccl_thema.min.css - 200 OK (1ms)
+
+
+Started GET "/assets/ccl_common.css?body=1" for 127.0.0.1 at 2014-03-05 10:57:27 +0900
+Served asset /ccl_common.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.mobile-1.3.1.min.css?body=1" for 127.0.0.1 at 2014-03-05 10:57:27 +0900
+Served asset /jquery.mobile-1.3.1.min.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.mobile.structure-1.3.1.min.css?body=1" for 127.0.0.1 at 2014-03-05 10:57:27 +0900
+Served asset /jquery.mobile.structure-1.3.1.min.css - 200 OK (1ms)
+
+
+Started GET "/assets/popup.css?body=1" for 127.0.0.1 at 2014-03-05 10:57:27 +0900
+Served asset /popup.css - 200 OK (1ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-03-05 10:57:27 +0900
+Served asset /main.css - 200 OK (17ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-03-05 10:57:27 +0900
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-03-05 10:57:27 +0900
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-03-05 10:57:27 +0900
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (45ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-03-05 10:57:28 +0900
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-03-05 10:57:28 +0900
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-03-05 10:57:28 +0900
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-03-05 10:57:28 +0900
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-03-05 10:57:28 +0900
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-03-05 10:57:28 +0900
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-05 10:57:28 +0900
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-05 10:57:28 +0900
+Served asset /jquery_ujs.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-03-05 10:57:28 +0900
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-03-05 10:57:28 +0900
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-03-05 10:57:28 +0900
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-03-05 10:57:28 +0900
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (1ms)
+
+
+Started GET "/assets/daum_editor.js?body=1" for 127.0.0.1 at 2014-03-05 10:57:28 +0900
+Served asset /daum_editor.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-05 10:57:28 +0900
+Served asset /twitter/bootstrap.js - 200 OK (10ms)
+
+
+Started GET "/assets/admin_foot_javascripts.js?body=1" for 127.0.0.1 at 2014-03-05 10:57:28 +0900
+Served asset /admin_foot_javascripts.js - 200 OK (1ms)
+
+
+Started GET "/assets/daum_editor_conf.js?body=1" for 127.0.0.1 at 2014-03-05 10:57:28 +0900
+Served asset /daum_editor_conf.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin_head_javascripts.js?body=1" for 127.0.0.1 at 2014-03-05 10:57:28 +0900
+Served asset /admin_head_javascripts.js - 200 OK (73ms)
+
+
+Started GET "/assets/jqueryFileUpload_custom.js?body=1" for 127.0.0.1 at 2014-03-05 10:57:28 +0900
+Served asset /jqueryFileUpload_custom.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-05 10:57:28 +0900
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/main_head_javascripts.js?body=1" for 127.0.0.1 at 2014-03-05 10:57:28 +0900
+Served asset /main_head_javascripts.js - 200 OK (13ms)
+
+
+Started GET "/assets/images/icons-18-white.png" for 127.0.0.1 at 2014-03-05 10:57:29 +0900
+Served asset /images/icons-18-white.png - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/icons-18-white.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/ryze-ubuntu/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ryze-ubuntu/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ryze-ubuntu/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ryze-ubuntu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/images/ajax-loader.gif" for 127.0.0.1 at 2014-03-05 10:57:29 +0900
+Served asset /images/ajax-loader.gif - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/ajax-loader.gif"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/ryze-ubuntu/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ryze-ubuntu/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ryze-ubuntu/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ryze-ubuntu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
