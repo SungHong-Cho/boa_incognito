@@ -1,7 +1,7 @@
 !!! 5
 %html
   %head
-    %title Boa치과 CCD 인코그니토 
+    %title Boa치과 CCD 인코그니토
     %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
     = stylesheet_link_tag "application"
     = stylesheet_link_tag "http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css"
@@ -9,6 +9,20 @@
     = javascript_include_tag "http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"
     = javascript_include_tag "http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"
     = javascript_include_tag "http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"
+    %script{type:"text/javascript", src:"http://wcs.naver.net/wcslog.js"}
+    %script{type:"text/javascript"}
+      if(document.URL.indexOf("progress")>0){
+      var _nasa={};
+      _nasa["cnv"] = wcs.cnv("5","1"); // 전환유형, 전환가치 설정해야함. 설치매뉴얼 참고
+      }
+    %script{type:"text/javascript", src:"http://wcs.naver.net/wcslog.js"}
+    %script{type:"text/javscript"}
+      if (!wcs_add) var wcs_add={};
+      wcs_add["wa"] = "s_290dcf2d137a";
+      if (!_nasa) var _nasa={};
+      wcs.inflow("ccdin.com");
+      wcs_do(_nasa);
+
     
 
   %body
